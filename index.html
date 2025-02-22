@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bikers Zone Website</title>
+    <!-- tailwind link -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google font link -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,13 +18,25 @@
             font-family: "Poppins", serif;
         }
     </style>
+     <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: '#da373d',
+              'bike-zone': '#E76F51',
+            }
+          }
+        }
+      }
+    </script>
 </head>
 <body class="font-poppins">
     <!-- header section -->
-     <header>
+     <header class="md:container mx-auto">
         <nav>
             <div class="navbar bg-base-100">
-                <div class="navbar-start">
+                <div class="flex-1">
                   <div class="dropdown">
                     <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
                       <svg
@@ -48,7 +62,7 @@
                 
                     </ul>
                   </div>
-                  <a class="btn btn-ghost text-xl">Biker Zone</a>
+                  <a class="font-bold text-xl">Biker Zone</a>
                 </div>
                 <div class="navbar-center hidden lg:flex">
                   <ul class="menu menu-horizontal px-1">
@@ -58,14 +72,14 @@
                     <li><a>Contact</a></li>
                   </ul>
                 </div>
-                <div class="navbar-end">
-                  <a class="btn">Button</a>
+                <div class="">
+                  <a class="btn bg-bike-zone text-white">Login</a>
                 </div>
               </div>
         </nav>
      </header>
      <!-- main section -->
-     <main></main>
+     <main class="md:container mx-auto"></main>
      <!-- footer section -->
      <footer></footer>
 </body>
